@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+use Illuminate\Support\Facades\Route;
+
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/products', 'ProductsController@index');
+Route::get('/product/addToCart/{id}','ProductsController@addProductToCart')->name('AddToCardProduct');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
