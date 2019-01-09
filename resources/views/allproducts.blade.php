@@ -33,7 +33,7 @@
                                     <li><a href="shop.html">Products</a></li>
                                     <li><a href="product-details.html">Product Details</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="{{route('cartProducts')}}">Cart</a></li>
                                     <li><a href="login.html">Login</a></li>
                                 </ul>
                             </li>
@@ -274,7 +274,7 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            {{$product->id}}
+                                            
                                             <img src="{{\Illuminate\Support\Facades\Storage::disk('local')->
                                             url('product_images/'.$product->image)}}" alt="" />
                                             <h2>{{$product->price}}</h2>
